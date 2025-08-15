@@ -89,23 +89,19 @@ const RootLayout = () => {
             <div
               className={cn(
                 'flex-1 overflow-y-auto  ',
-                !shouldRemovePaddingTop ? 'md:px-4' : ''
+                !shouldRemovePaddingTop ? 'md:px-6' : ''
               )}
             >
               <Outlet />
             </div>
 
             {renderPricing && (
-              <div className="md:px-4">
+              <div className="md:px-6">
                 <Pricing />
               </div>
             )}
             {renderFaqAndQuestion && <FaqSection showCustomQuestion />}
-            {renderFaq && (
-              <div className="px-4 md:px-4">
-                <FaqSection showCustomQuestion={false} />
-              </div>
-            )}
+            {renderFaq && <FaqSection showCustomQuestion={false} />}
           </div>
           {renderFooter && <Footer />}
         </div>
