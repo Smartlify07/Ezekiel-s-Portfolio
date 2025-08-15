@@ -29,7 +29,10 @@ export const IndustriesExceled = () => {
 const TopSection = () => {
   return (
     <section className="flex flex-col gap-4 font-geist">
-      <Badge className="font-medium self-center flex items-center gap-2 opacity-50 text-[#EDEDEB]">
+      <Badge
+        shadowSize="small"
+        className="font-medium self-center flex items-center gap-2 opacity-50 text-[#EDEDEB]"
+      >
         <img src={BuildingIcon} /> Industries
       </Badge>
       <h1 className="text-[40px] text-center tracking-[-0.88px] font-medium gradient-text">

@@ -18,7 +18,7 @@ export const FaqSection = ({
     setActiveIndex(activeIndex === index ? null : index);
   };
   return (
-    <section className="md:px-6 flex flex-col gap-12">
+    <section className="md:px-6 flex flex-col gap-[46px]">
       <BadgeAndHeader
         title="Everything you need to know before we start"
         badgeTitle="Frequently Asked Questions"
@@ -29,7 +29,7 @@ export const FaqSection = ({
       <div className="flex flex-col md:flex-row items-start gap-6">
         <div
           className={cn(
-            'grid gap-6 w-full',
+            'grid gap-4 w-full',
             showCustomQuestion ? 'md:w-8/12' : 'w-full'
           )}
         >

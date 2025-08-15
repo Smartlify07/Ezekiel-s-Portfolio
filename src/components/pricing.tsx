@@ -13,7 +13,10 @@ export const Pricing = () => {
   return (
     <section className="px-4 md:px-0 font-geist grid gap-11">
       <div className="grid gap-4 place-items-center">
-        <Badge className="flex text-[#EDEDEB] items-center gap-2">
+        <Badge
+          shadowSize="small"
+          className="flex text-[#EDEDEB] items-center gap-2"
+        >
           <img src={CurrencyIcon} alt="currency-icon" />
           Pricing
         </Badge>
@@ -136,7 +139,7 @@ const PricingCard = ({
           Contact Me
         </Button>
 
-        <div className="pt-4 grid gap-2 border-t border-grey-4/60 border-dashed">
+        <div className="pt-4 grid gap-2.5 border-t border-grey-4/60 border-dashed">
           {list.map((item, index) => (
             <div key={index} className="flex items-center gap-2">
               <img src={DoubleCheck} alt="double-check" />

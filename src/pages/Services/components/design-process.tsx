@@ -9,7 +9,10 @@ export const DesignProcess = () => {
   return (
     <section className="flex flex-col font-geist gap-11 px-4 md:px-0">
       <div className="flex flex-col gap-4">
-        <Badge className="text-[#EDEDEB] flex items-center gap-2 self-center font-medium opacity-50">
+        <Badge
+          shadowSize="small"
+          className="text-[#EDEDEB] flex items-center gap-2 self-center font-medium opacity-50"
+        >
           <img src={RoutingIcon} alt="routing-icon" />
           Design Approach
         </Badge>

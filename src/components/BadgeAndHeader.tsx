@@ -15,7 +15,10 @@ const BadgeAndHeader = ({
 }) => {
   return (
     <div className="grid gap-4 font-geist place-items-center">
-      <Badge className={'flex text-[#EDEDEB] items-center gap-2 opacity-50'}>
+      <Badge
+        shadowSize="small"
+        className={'flex text-[#EDEDEB] items-center gap-2 opacity-50'}
+      >
         <img src={icon} alt={alt} />
         {badgeTitle}
       </Badge>

@@ -55,15 +55,12 @@ const IntroSection = () => {
     <section className="gap-11 pl-10 pr-4 h-[335px] overflow-y-auto scrollbar-hide flex flex-col">
       <div className="flex flex-col gap-9">
         <div className="flex flex-col gap-4">
-          <Badge
-            shadows={false}
-            className="font-geist self-start inline-flex items-center gap-1"
-          >
+          <div className="font-geist self-start inline-flex py-1.5 px-2 text-sm items-center gap-1 rounded-[10px] border border-[rgba(144,144,144,0.07)] bg-[rgba(144,144,144,0.2)]">
             <span className="text-[#909090]">From</span>
             <span className="text-[#EDEDEB] font-semibold leading-[20px] text-sm">
               $1,300
             </span>
-          </Badge>
+          </div>
           <header>
             <h1 className="gradient-text text-[40px]/[52px] tracking-[-2px] font-medium text-left font-geist">
               Making complex ideas easier to understand through smart design.

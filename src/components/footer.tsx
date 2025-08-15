@@ -32,7 +32,7 @@ const Footer = () => {
         </div>
       </section>
       <div className="rounded-full circle-gradient size-[1054px] absolute blur-[200px] right-[48px] top-[300px]"></div>
-      <section className="flex flex-col gap-8 relative md:flex-row md:items-start md:justify-between p-4 md:pt-4 md:px-4 border-t z-10 border-[#4C4C4C]/40">
+      <section className="flex flex-col gap-8 relative md:flex-row md:items-start md:justify-between p-4 md:pt-4 md:px-6 border-t z-10 border-[#4C4C4C]/40">
         <div className="absolute w-full lg:hidden h-[502px] md:w-[502px] left-0 top-0 footer-bottom opacity-50"></div>
         <div className="flex items-center md:items-start  flex-col gap-2.5">
           <div className="flex items-center gap-4">

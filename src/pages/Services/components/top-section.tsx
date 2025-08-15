@@ -15,7 +15,10 @@ export const TopSection = () => {
 
   return (
     <section className="flex flex-col gap-6 px-4 md:px-0">
-      <Badge className="text-[#EDEDEB] text-xl/[20px] px-2 py-2.5 opacity-50 font-medium flex gap-2 items-center font-geist self-start">
+      <Badge
+        shadowSize="small"
+        className="text-[#EDEDEB] text-xl/[20px] px-2 py-2.5 opacity-50 font-medium flex gap-2 items-center font-geist self-start"
+      >
         <img src={Icon} alt="selected-works" className="shrink-0" /> Design
         Services
       </Badge>

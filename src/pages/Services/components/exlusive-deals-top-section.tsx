@@ -4,7 +4,10 @@ import Badge from '@/ui/badge';
 export const ExclusiveDealsTopSection = () => {
   return (
     <section className="flex flex-col items-center gap-4">
-      <Badge className="opacity-50 font-geist flex self-center text-[#EDEDEB] items-center gap-2">
+      <Badge
+        shadowSize="small"
+        className="opacity-50 font-geist flex self-center text-[#EDEDEB] items-center gap-2"
+      >
         <img src={Pallete2} />
         Exclusive Deals
       </Badge>
