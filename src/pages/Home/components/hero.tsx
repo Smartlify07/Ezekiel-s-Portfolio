@@ -2,6 +2,8 @@ import { CloudDownload, Plain } from '@solar-icons/react';
 import Button from '@/ui/button';
 import Card from '@/ui/card';
 import HeroImage from '@/../public/assets/images/hero-image.png';
+import HeroImageLarge from '@/../public/assets/images/hero-image-large.png';
+
 const HeroSection = () => {
   return (
     <section className="flex flex-col bg-[#111119] rounded-4xl p-6 gap-8 md:flex-row">
@@ -31,7 +33,14 @@ const HeroSection = () => {
       </div>
 
       <Card className="flex md:w-[300px] items-center shrink-0 justify-center h-[322px]">
-        <img src={HeroImage} />
+        <picture>
+          <source media="(min-width:768px)" srcSet={HeroImageLarge}></source>
+          <source media="(max-width:767px)" srcSet={HeroImage}></source>
+          <img
+            alt="Ezekiel Olayiwola using his laptop to work"
+            src={HeroImage}
+          />
+        </picture>
       </Card>
     </section>
   );

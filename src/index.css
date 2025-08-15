@@ -342,9 +342,24 @@
 }
 
 .spots {
+  animation-name: pulse;
+  animation-duration: 2s;
+  animation-iteration-count: infinite;
+}
+.spots-wrapper {
   animation-name: pulse-glow;
   animation-duration: 2s;
   animation-iteration-count: infinite;
+}
+
+@keyframes pulse {
+  0%,
+  100% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(1.04);
+  }
 }
 
 @keyframes pulse-glow {
@@ -354,7 +369,7 @@
     opacity: 0.8;
   }
   50% {
-    transform: scale(1.04);
+    transform: scale(1.08);
     opacity: 1;
   }
 }
