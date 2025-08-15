@@ -1,12 +1,12 @@
 import { cn } from '@/lib/utils';
-
+import { motion, type HTMLMotionProps } from 'motion/react';
 const Card = ({
   children,
   className,
   ...props
-}: React.ComponentProps<'div'>) => {
+}: HTMLMotionProps<'div'> & React.ComponentProps<'div'>) => {
   return (
-    <div
+    <motion.div
       {...props}
       className={cn(
         'bg-dark-blue rounded-2xl shadow-[0px_0px_5.5px_rgba(86,86,119,0.25)]',
@@ -14,7 +14,7 @@ const Card = ({
       )}
     >
       {children}
-    </div>
+    </motion.div>
   );
 };
 

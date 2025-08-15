@@ -2,10 +2,17 @@ import { uniqueValueProps } from '@/lib/constants';
 import Card from '@/ui/card';
 import { CallToActionSection } from './cta';
 import { cn } from '@/lib/utils';
+import { motion } from 'motion/react';
 
 export const UniqueValueProp = () => {
   return (
-    <section className="px-4 md:px-0 grid gap-14">
+    <motion.section
+      initial={{ opacity: 0 }}
+      whileInView={{
+        opacity: 1,
+      }}
+      className="px-4 md:px-0 grid gap-14"
+    >
       <div className="grid gap-12">
         <header>
           <h1 className="text-[40px] font-medium font-geist gradient-text md:text-center">
@@ -24,7 +31,7 @@ export const UniqueValueProp = () => {
         subtitle="Simply post your query and I’ll promptly reach out to you.
 "
       />
-    </section>
+    </motion.section>
   );
 };
 
@@ -41,6 +48,17 @@ const ValuePropCard = ({
 }) => {
   return (
     <Card
+      initial={{
+        opacity: 0,
+        y: 30,
+      }}
+      whileInView={{
+        y: 0,
+        opacity: 1,
+      }}
+      transition={{
+        duration: 0.3,
+      }}
       className={cn(
         'shadow-none bg-sidebar-bg rounded-none py-9 border-t border-b border-grey-4/60 flex flex-col gap-6 font-geist px-0',
         index % 2 === 0 ? 'md:flex-row' : 'md:flex-row-reverse'
@@ -52,13 +70,22 @@ const ValuePropCard = ({
         </h1>
         <p className="text-sm/[150%] text-grey-9">{subtitle}</p>
       </div>
-      <div className="rounded-2xl shrink-0 md:w-[300px] md:h-[130px]">
-        <img
+      <motion.div className="rounded-2xl overflow-hidden shrink-0 md:w-[300px] md:h-[130px]">
+        <motion.img
+          initial={{
+            scale: 1,
+          }}
+          whileHover={{
+            scale: 1.2,
+          }}
+          transition={{
+            duration: 0.3,
+          }}
           src={image}
           alt={title}
           className="w-full h-full rounded-2xl object-cover shrink-0 shadow-[0_0_5.5px_0_rgba(86,86,119,0.25)]"
         />
-      </div>
+      </motion.div>
     </Card>
   );
 };
