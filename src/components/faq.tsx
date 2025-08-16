@@ -29,7 +29,7 @@ export const FaqSection = ({
       <div className="flex flex-col md:flex-row items-start gap-6">
         <div
           className={cn(
-            'grid gap-4 w-full',
+            'grid gap-1 md:gap-4 w-full',
             showCustomQuestion ? 'md:w-8/12' : 'w-full'
           )}
         >

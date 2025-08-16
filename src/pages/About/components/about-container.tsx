@@ -5,7 +5,7 @@ import { LetsTalkButton } from '@/components/lets-talk-button';
 
 export const AboutContainer = () => {
   return (
-    <section className="bg-[#111119] flex flex-col gap-8 rounded-4xl px-4 py-6 md:flex-row">
+    <section className="bg-[#111119] flex flex-col gap-8 rounded-4xl px-4 py-6  md:p-6 md:flex-row">
       <div className="flex flex-col md:w-8/12 gap-9">
         <StorySection />
         <div className="flex items-center shrink-0 gap-4">

@@ -1,6 +1,6 @@
 export const StatsSection = () => {
   return (
-    <section className="px-4 flex items-center overflow-hidden justify-center md:px-0">
+    <section className="flex items-center overflow-hidden justify-center md:px-0">
       <hr className="border-[#D9D9D9]/5 border hidden md:block w-4/12" />
       <div className="flex flex-col relative md:w-11/12 md:flex-row md:justify-center md:items-center texture rounded-3xl p-6 gap-2.5 md:gap-[42px] bg-sidebar-bg/30">
         <div className="absolute bg-[#0F0F1A] opacity-30 z-10 w-full h-full"></div>
