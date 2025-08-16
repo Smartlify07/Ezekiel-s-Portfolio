@@ -61,6 +61,7 @@ const ProcessCard = ({
         y: 0,
       }}
       transition={{
+        duration: 0.3,
         delay: index * 0.2,
       }}
       className="rounded-4xl h-full row-span-1"
