@@ -32,9 +32,13 @@ const HeroSection = () => {
         </div>
       </div>
 
-      <Card className="flex md:w-[300px] items-center shrink-0 justify-center h-[322px]">
+      <Card className="flex md:w-[300px] overflow-hidden items-center shrink-0 justify-center h-[322px]">
         <picture>
-          <source media="(min-width:768px)" srcSet={HeroImageLarge}></source>
+          <source
+            media="(min-width:768px)"
+            className="w-full h-fit"
+            srcSet={HeroImageLarge}
+          ></source>
           <source media="(max-width:767px)" srcSet={HeroImage}></source>
           <img
             alt="Ezekiel Olayiwola using his laptop to work"
