@@ -114,7 +114,7 @@ const PricingCard = ({
             <img src={icon} alt={title} />
           </div>
 
-          <div className="grid gap-14 md:gap-6">
+          <div className="flex flex-col h-[270px] justify-between md:gap-6">
             <div className="grid gap-2">
               <h1 className="gradient-text text-xl text-left -tracking-smaller font-medium ">
                 {title}
@@ -123,8 +123,7 @@ const PricingCard = ({
             </div>
             <h1
               className={cn(
-                'pricing-text -tracking-smaller font-medium text-[40px]',
-                !first && 'md:mt-5'
+                'pricing-text -tracking-smaller font-medium text-[40px]'
               )}
             >
               Custom
