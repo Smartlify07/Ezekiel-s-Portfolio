@@ -18,7 +18,7 @@ export const DesignProcess = () => {
         </Badge>
 
         <div className="flex flex-col gap-4">
-          <h1 className="gradient-text font-medium tracking-[-0.88px] text-center text-[40px]">
+          <h1 className="gradient-text font-medium tracking-[-0.88px] text-center text-[40px]/[52px]">
             UX/UI Design Process
           </h1>
           <p className="text-sm/[150%] text-center text-[#909090]">

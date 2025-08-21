@@ -37,7 +37,7 @@ export const ProjectCard = ({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       ref={scope}
-      className="relative project-card cursor-pointer border border-red-500 w-full shrink-0"
+      className="relative project-card cursor-pointer w-full shrink-0"
     >
       <div className="rounded-3xl h-[309px] w-full">
         <img

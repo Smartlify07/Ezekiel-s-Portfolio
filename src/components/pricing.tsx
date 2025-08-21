@@ -5,7 +5,6 @@ import Cursor from '@/../public/assets/icons/Cursor.svg';
 import DoubleCheck from '@/../public/assets/icons/DoubleCheck.svg';
 import Badge from '@/ui/badge';
 import { pricing } from '@/lib/constants';
-import { CardStroke } from '@/components/card-stroke';
 import Button from '@/ui/button';
 import { cn } from '@/lib/utils';
 
@@ -103,7 +102,13 @@ const PricingCard = ({
   list: string[];
 }) => {
   return (
-    <CardStroke className="rounded-4xl">
+    <div
+      className={cn(
+        'rounded-4xl',
+        !first &&
+          'border-l border-b border-b-[rgb(252,255,236,0.1)] border-l-[rgb(252,255,236,0.1)]'
+      )}
+    >
       <div
         className={`rounded-4xl gap-6 flex flex-col p-6 h-full  ${
           first ? 'texture-2 bg-[rgba(15,15,26,0.3)]' : 'bg-[#171721]'
@@ -114,7 +119,7 @@ const PricingCard = ({
             <img src={icon} alt={title} />
           </div>
 
-          <div className="flex flex-col h-[270px] justify-between md:gap-6">
+          <div className="flex flex-col min-h-[228px] lg:h-[270px] justify-between md:gap-6">
             <div className="grid gap-2">
               <h1 className="gradient-text text-xl text-left -tracking-smaller font-medium ">
                 {title}
@@ -147,6 +152,6 @@ const PricingCard = ({
           ))}
         </div>
       </div>
-    </CardStroke>
+    </div>
   );
 };
