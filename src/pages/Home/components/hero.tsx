@@ -1,8 +1,9 @@
-import { CloudDownload, Plain } from '@solar-icons/react';
+import { CloudDownload } from '@solar-icons/react';
 import Button from '@/ui/button';
 import Card from '@/ui/card';
 import HeroImage from '@/../public/assets/images/hero-image.png';
 import HeroImageLarge from '@/../public/assets/images/hero-image-large.png';
+import { LetsTalkButton } from '@/components/lets-talk-button';
 
 const HeroSection = () => {
   return (
@@ -16,12 +17,7 @@ const HeroSection = () => {
         </header>
 
         <div className="flex items-center shrink-0 gap-4">
-          <Button
-            variant="default"
-            className="flex shrink-0 items-center gap-2"
-          >
-            <Plain className="text-[#EDEDEB]" size={16} /> Let's talk
-          </Button>
+          <LetsTalkButton />
           <Button
             variant="outline"
             className="flex items-center gap-2 shrink-0"
