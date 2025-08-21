@@ -189,9 +189,16 @@ const FormSelect = ({
   onChange: (val: string) => void;
 }) => {
   const options = [
-    { label: 'Design', value: 'design' },
-    { label: 'Development', value: 'dev' },
-    { label: 'Consulting', value: 'consult' },
+    { label: 'UI/UX Design', value: 'ui_ux_design' },
+    { label: 'Brand Design', value: 'brand_design' },
+    { label: 'UX Research', value: 'ux_research' },
+    { label: 'Product Design', value: 'product_design' },
+    { label: 'No-Code Development', value: 'no_code_development' },
+    {
+      label: 'Collaboration & Consulting',
+      value: 'collaboration_and_consulting',
+    },
+    { label: 'Others', value: 'others' },
   ];
 
   return (

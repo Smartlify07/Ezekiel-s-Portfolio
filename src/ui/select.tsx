@@ -61,7 +61,7 @@ const CustomSelect = ({
       </div>
 
       {isOpen && (
-        <ul className="absolute w-full z-20 custom-select-dropdown rounded-2xl pb-3">
+        <ul className="absolute h-[200px] overflow-scroll scrollbar-hide w-full z-20 custom-select-dropdown rounded-2xl pb-3">
           <div className="border-b border-dashed w-full border-[rgba(76,76,76,0.50)] text-xs text-grey-9 font-geist font-medium pt-4 pr-3 pb-2 pl-3">
             {label || value}
           </div>
