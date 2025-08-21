@@ -14,7 +14,7 @@ export default function ProjectDetailsPage() {
   return (
     <main className="grid gap-10 font-geist">
       <TopSection />
-      <div className="grid px-6 gap-10">
+      <div className="grid px-4 lg:px-6 gap-10">
         <ProjectStats title="Maxwell EV Charging" />
         <AboutProjectSection />
         <DesignGoalSection />
