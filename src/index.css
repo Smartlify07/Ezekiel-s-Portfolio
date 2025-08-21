@@ -196,67 +196,38 @@
   background: linear-gradient(
     -87deg,
     var(--color-white-opaque) 0%,
-    rgb(255, 255, 236, 0.63) 38%,
-    rgb(255, 255, 236, 0.59) 42%,
-    rgb(255, 255, 236, 0.2) 100%
+    rgb(255, 255, 236, 0.63) 20%,
+    rgb(255, 255, 236, 0.59) 30%,
+    #b96add 50%,
+    #ff6c64 75%,
+    #ffa94b 100%
   );
   background-clip: text;
-  color: transparent;
   -webkit-background-clip: text;
+  color: transparent;
   -webkit-text-fill-color: transparent;
-  background-size: 200% 200%;
-  animation: spotify 40s ease-in-out infinite;
+  background-size: 600%;
+  animation: spotify 3s ease-in-out infinite;
 }
 
 @keyframes spotify {
   0% {
-    background: linear-gradient(
-      278deg,
-      #fcffec 5.77%,
-      rgba(252, 255, 236, 0.02) 113.79%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-position: 0% 50%;
+    background-position: 0 0;
   }
-
-  33% {
-    background: linear-gradient(
-      291deg,
-      #b96add 29.07%,
-      #ff6c64 57.18%,
-      #ffa94b 84.19%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-position: 50% 50%;
+  25% {
+    background-position: 50% 0;
   }
-
-  66% {
-    background: linear-gradient(
-      98deg,
-      #fcffec 0.67%,
-      rgba(252, 255, 236, 0.02) 97.81%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-position: 100% 50%;
+  50% {
+    background-position: 90% 0;
   }
-
+  60% {
+    background-position: 60%;
+  }
+  75% {
+    background-position: 40%;
+  }
   100% {
-    background: linear-gradient(
-      180deg,
-      #d065ff -3.1%,
-      #f26ca7 49.48%,
-      #ffaa4c 100%
-    );
-    background-clip: text;
-    -webkit-background-clip: text;
-    -webkit-text-fill-color: transparent;
-    background-position: 0% 50%;
+    background-position: 0 0;
   }
 }
 
@@ -355,12 +326,12 @@
 
 .spots {
   animation-name: pulse;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-iteration-count: infinite;
 }
 .spots-wrapper {
   animation-name: pulse-glow;
-  animation-duration: 2s;
+  animation-duration: 1s;
   animation-iteration-count: infinite;
 }
 
@@ -400,14 +371,27 @@
 }
 
 .navbar-active {
-  background: linear-gradient(var(--button-primary-gradient)),
-    url('/public/assets/images/asfalt-light.png'); /* Put your actual image path here */
-
+  background: linear-gradient(var(--button-primary-gradient));
   background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
 
   filter: drop-shadow(0px 10px 4px rgba(255, 170, 76, 0.25)), blur(20px);
+}
+
+.navbar-active::before {
+  content: '';
+  background-image: url(/public/assets/images/texture-1.png);
+  background-size: cover;
+  z-index: 1;
+  position: absolute;
+  top: 0;
+  left: 0;
+  opacity: 0.1;
+  width: 100%;
+  height: 100%;
 }
 
 .contact-page-top-gradient {
@@ -499,12 +483,7 @@
   height: 16px;
   border-radius: 50%;
   padding: 2px; /* space for gradient border */
-  background: linear-gradient(
-    135deg,
-    #b96add,
-    #ff6c64,
-    #ffa94b
-  ); /* gradient border */
+  background: var(--color-grey-9); /* gradient border */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -523,6 +502,15 @@
   width: 100%;
   height: 100%;
   border-radius: 50%;
+}
+
+.radio-input:checked + .radio-outer {
+  background: linear-gradient(
+    135deg,
+    #b96add,
+    #ff6c64,
+    #ffa94b
+  ); /* selected gradient fill */
 }
 
 .radio-input:checked + .radio-outer .radio-inner {

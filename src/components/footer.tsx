@@ -12,7 +12,7 @@ import { BookACallButton } from './book-a-call-button';
 const Footer = () => {
   const socialIcons = [Email, Dribbble, Behance, X, LinkedIn, SixSelf];
   return (
-    <footer className="py-10 px-4 md:px-0 bg-sidebar-bg overflow-hidden relative grid gap-10">
+    <footer className="py-10 px-4 md:px-0 min-h-[678px] lg:min-h-auto bg-sidebar-bg overflow-hidden relative flex flex-col gap-10">
       <div className="absolute inset-0 bg-[rgba(225,185,148,0.1)] opacity-40"></div>
       <div className="absolute w-full hidden lg:block h-[502px] md:w-[502px] left-0 footer-bottom opacity-10"></div>
       <section className="flex flex-col items-center gap-8 relative">
@@ -96,7 +96,7 @@ const Footer = () => {
           </div>
 
           <div className="pt-2">
-            <h3 className="text-[#909090] text-sm/[150%] font-geist">
+            <h3 className="text-[#909090] text-center lg:text-start text-sm/[150%] font-geist">
               Ezekiel Olayiwola &copy; 2025 | All rights
               <br />
               reserved.

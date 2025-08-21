@@ -15,6 +15,7 @@ export const SpotifyEmbed = () => {
   const [loading, setLoading] = useState(true);
   useEffect(() => {
     const fetchCurrentTrack = async () => {
+      console.log('refetch');
       try {
         const res = await fetch(
           'https://ezekiels-portfolio-backend.onrender.com/currently-playing',
@@ -43,6 +44,7 @@ export const SpotifyEmbed = () => {
 
     return () => {
       window.removeEventListener('focus', fetchCurrentTrack);
+      window.removeEventListener('visibilitychange', fetchCurrentTrack);
     };
   }, []);
 
@@ -54,8 +56,9 @@ export const SpotifyEmbed = () => {
     <div className="flex flex-col md:flex-row md:items-center text-grey-opaque gap-2">
       <div className="flex items-center gap-4">
         <img src={Headphones} />
-        <p className="text-sm font-normal flex items-center gap-2 -tracking-smallest">
+        <p className="text-sm font-normal flex flex-col lg:flex-row lg:items-center lg:gap-2 -tracking-smallest">
           Shipping while enjoying some tunes
+          <br className="lg:hidden"></br>
           <span className="spotify-text text-sm truncate overflow-ellipsis w-[150px] md:w-auto font-inter-tight italic">
             {loading && 'Getting track...'} {track && trackDisplay}
           </span>

@@ -1,4 +1,4 @@
-import { toolsUsed } from '@/lib/constants';
+import { toolsUsed } from '@/lib/tools-used';
 
 export const Stack = () => {
   return (

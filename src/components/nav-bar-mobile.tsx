@@ -31,8 +31,8 @@ const NavLink = ({
   return (
     <Link
       to={to}
-      className={`grid gap-1 drop-shadow-2xl font-geist place-items-center p-2 ${
-        pathname === to ? 'navbar-active rounded-2xl' : ''
+      className={`grid gap-1 drop-shadow-2xl relative z-[1] font-geist place-items-center p-2 ${
+        pathname === to ? 'navbar-active relative rounded-2xl' : ''
       }`}
     >
       <Icon

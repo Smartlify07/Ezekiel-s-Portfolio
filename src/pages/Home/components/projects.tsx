@@ -37,13 +37,13 @@ export const ProjectCard = ({
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
       ref={scope}
-      className="relative project-card cursor-pointer w-full shrink-0"
+      className="relative project-card cursor-pointer border border-red-500 w-full shrink-0"
     >
       <div className="rounded-3xl h-[309px] w-full">
         <img
           src={image}
           alt={title}
-          className="w-[436.62px] h-[309px] aspect-[436.72/331.00] object-cover rounded-3xl"
+          className="w-full lg:w-[436.62px] h-[309px] aspect-[436.72/331.00] object-cover rounded-3xl"
         />
       </div>
       <div className="project-gradient absolute left-0 overflow-clip bottom-0 flex flex-col font-geist py-4 px-5 gap-2">
@@ -67,7 +67,7 @@ export const ProjectCard = ({
           >
             <ArrowRightUp
               weight="Broken"
-              className="text-[#909090]  shrink-0"
+              className="text-[#909090] shrink-0"
               size={16}
             />
           </button>

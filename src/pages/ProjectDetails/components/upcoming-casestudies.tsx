@@ -7,14 +7,20 @@ import { useNavigate, useParams } from 'react-router';
 
 export const UpcomingCaseStudies = () => {
   const params = useParams();
-
+  const router = useNavigate();
   return (
     <section className="flex flex-col gap-6 font-geist pb-10 border-b-grey-4/60">
       <div className="flex flex-col gap-4 md:flex-row md:items-center md:justify-between">
         <h1 className="gradient-text text-start font-medium text-[40px]/[52px] -tracking-smaller">
           Upcoming Case Studies
         </h1>
-        <Button variant="default" className="self-start md:self-center">
+        <Button
+          onClick={() => {
+            router('/');
+          }}
+          variant="default"
+          className="self-start md:self-center"
+        >
           <Case size={16} weight="Outline" />
           See More Case Study
         </Button>
