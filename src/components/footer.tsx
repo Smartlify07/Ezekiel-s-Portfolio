@@ -8,6 +8,7 @@ import LinkWithWave from './link-with-wave';
 import { ScrollToTopButton } from './scroll-to-top-button';
 import { LetsTalkButton } from './lets-talk-button';
 import { BookACallButton } from './book-a-call-button';
+import { CONTACT_INFO } from '@/lib/contact-info';
 
 const Footer = () => {
   const socialIcons = [Email, Dribbble, Behance, X, LinkedIn, SixSelf];
@@ -85,13 +86,13 @@ const Footer = () => {
           <div className="flex items-center gap-2">
             <h3 className="text-[#909090] text-sm font-geist">CONTACT ME:</h3>
             <h3 className="text-[#EDEDEB] text-sm font-geist font-medium">
-              +2349033267104
+              {CONTACT_INFO.phone}
             </h3>
           </div>
           <div className="flex items-center gap-2">
             <h3 className="text-[#909090] text-sm font-geist">EMAIL:</h3>
             <h3 className="text-[#EDEDEB] font-geist text-sm font-medium">
-              temitayobolaji@gmail.com
+              {CONTACT_INFO.email}
             </h3>
           </div>
 

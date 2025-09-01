@@ -6,15 +6,16 @@ import BehanceIcon from '@/../public/assets/icons/Behance.svg';
 import Twitter from '@/../public/assets/icons/Twitter.svg';
 import LinkedIn from '@/../public/assets/icons/LinkedIn.svg';
 import Sixself from '@/../public/assets/icons/sixself.svg';
+import { CONTACT_INFO } from '@/lib/contact-info';
 
 const contact = [
   {
     Icon: Phone,
-    text: '+2349033267104',
+    text: CONTACT_INFO.phone,
   },
   {
     Icon: Letter,
-    text: 'temitayobolaji@gmail.com ',
+    text: CONTACT_INFO.email,
   },
 ];
 const socialIcons = [
